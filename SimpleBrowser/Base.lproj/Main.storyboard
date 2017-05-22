@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleBrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7U-2S-d75">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Bfe-B4-lec" userLabel="Sarch Bar">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Sci-os-oIX"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="1oo-hW-a5L"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bfe-B4-lec" secondAttribute="bottom" id="9FF-v5-y8X"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bfe-B4-lec" secondAttribute="trailing" id="AUl-Su-PrM"/>
+                                    <constraint firstItem="Bfe-B4-lec" firstAttribute="leading" secondItem="n7U-2S-d75" secondAttribute="leading" id="Eba-Yn-4Ic"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1n-DO-9tj">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Kev-Jr-in6"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="gcv-Bl-1Rx">
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="BYZ-38-t0r" id="tfF-29-ASf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9e5-l2-GdR"/>
+                                    <barButtonItem title="Item" id="8fa-wo-Ccf">
+                                        <connections>
+                                            <action selector="reloadButtonTapped:" destination="BYZ-38-t0r" id="emS-WR-uUz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" id="wys-q4-FdV">
+                                        <connections>
+                                            <action selector="stopButtonTapped:" destination="BYZ-38-t0r" id="mV2-ja-Bjm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5C-U1-V9W">
+                                <rect key="frame" x="16" y="84" width="343" height="539"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="d1n-DO-9tj" secondAttribute="trailing" id="7Aj-gT-SZR"/>
+                            <constraint firstAttribute="trailing" secondItem="n7U-2S-d75" secondAttribute="trailing" id="7ZX-z9-gDq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b5C-U1-V9W" secondAttribute="trailing" id="DMz-QD-bG8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d1n-DO-9tj" secondAttribute="bottom" id="JV9-Xb-a74"/>
+                            <constraint firstItem="n7U-2S-d75" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y3k-AD-QPs"/>
+                            <constraint firstItem="b5C-U1-V9W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aVf-So-8ZS"/>
+                            <constraint firstItem="n7U-2S-d75" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eMB-33-byc"/>
+                            <constraint firstItem="d1n-DO-9tj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oTY-rQ-Iy5"/>
+                            <constraint firstItem="b5C-U1-V9W" firstAttribute="top" secondItem="n7U-2S-d75" secondAttribute="bottom" id="v4n-Ws-lLP"/>
+                            <constraint firstItem="d1n-DO-9tj" firstAttribute="top" secondItem="b5C-U1-V9W" secondAttribute="bottom" id="vfI-RV-3XD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="gcv-Bl-1Rx" id="1k1-WX-Cmd"/>
+                        <outlet property="reloadButton" destination="8fa-wo-Ccf" id="UuY-UB-Tb5"/>
+                        <outlet property="searchBar" destination="Bfe-B4-lec" id="mHg-GX-fcC"/>
+                        <outlet property="stopButton" destination="wys-q4-FdV" id="StH-YT-7lN"/>
+                        <outlet property="webView" destination="b5C-U1-V9W" id="HdE-ld-RoT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="177" y="-479"/>
         </scene>
     </scenes>
 </document>
