@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00CEF38B1ED33EE4003E11DB /* button-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CEF38A1ED33EE4003E11DB /* button-back.png */; };
 		00D89D661ED20F910048B8D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D89D651ED20F910048B8D7 /* AppDelegate.swift */; };
 		00D89D681ED20F910048B8D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D89D671ED20F910048B8D7 /* ViewController.swift */; };
 		00D89D6B1ED20F910048B8D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D89D691ED20F910048B8D7 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00CEF38A1ED33EE4003E11DB /* button-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-back.png"; sourceTree = "<group>"; };
 		00D89D621ED20F910048B8D7 /* SimpleBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D89D651ED20F910048B8D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D89D671ED20F910048B8D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00CEF38C1ED33F0E003E11DB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				00CEF38A1ED33EE4003E11DB /* button-back.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		00D89D591ED20F910048B8D7 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 				00D89D6C1ED20F910048B8D7 /* Assets.xcassets */,
 				00D89D6E1ED20F910048B8D7 /* LaunchScreen.storyboard */,
 				00D89D711ED20F910048B8D7 /* Info.plist */,
+				00CEF38C1ED33F0E003E11DB /* Resource */,
 			);
 			path = SimpleBrowser;
 			sourceTree = "<group>";
@@ -232,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00CEF38B1ED33EE4003E11DB /* button-back.png in Resources */,
 				00D89D701ED20F910048B8D7 /* LaunchScreen.storyboard in Resources */,
 				00D89D6D1ED20F910048B8D7 /* Assets.xcassets in Resources */,
 				00D89D6B1ED20F910048B8D7 /* Main.storyboard in Resources */,
@@ -507,6 +519,7 @@
 				00D89D8C1ED20F910048B8D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00D89D8D1ED20F910048B8D7 /* Build configuration list for PBXNativeTarget "SimpleBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +528,7 @@
 				00D89D8F1ED20F910048B8D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00D89D901ED20F910048B8D7 /* Build configuration list for PBXNativeTarget "SimpleBrowserUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +537,7 @@
 				00D89D921ED20F910048B8D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

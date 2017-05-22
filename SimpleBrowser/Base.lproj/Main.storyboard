@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="height" constant="44" id="Kev-Jr-in6"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="gcv-Bl-1Rx">
+                                    <barButtonItem image="button-back.png" id="gcv-Bl-1Rx">
                                         <connections>
                                             <action selector="backButtonTapped:" destination="BYZ-38-t0r" id="tfF-29-ASf"/>
                                         </connections>
@@ -97,4 +97,7 @@
             <point key="canvasLocation" x="177" y="-479"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button-back.png" width="44" height="44"/>
+    </resources>
 </document>
