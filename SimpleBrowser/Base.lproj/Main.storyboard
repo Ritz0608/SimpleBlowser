@@ -52,13 +52,27 @@
                                             <action selector="backButtonTapped:" destination="BYZ-38-t0r" id="tfF-29-ASf"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9e5-l2-GdR"/>
-                                    <barButtonItem title="Item" id="8fa-wo-Ccf">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="EDd-Gr-gbP"/>
+                                    <barButtonItem style="plain" id="HG8-qp-suy">
+                                        <view key="customView" alpha="0.0" contentMode="scaleToFill" id="VbK-VC-7QB">
+                                            <rect key="frame" x="171" y="5.5" width="33" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="a04-Mz-6Eb">
+                                                    <rect key="frame" x="6" y="7" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mlb-Wx-XqV"/>
+                                    <barButtonItem systemItem="refresh" id="8fa-wo-Ccf">
                                         <connections>
                                             <action selector="reloadButtonTapped:" destination="BYZ-38-t0r" id="emS-WR-uUz"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Item" id="wys-q4-FdV">
+                                    <barButtonItem systemItem="stop" id="wys-q4-FdV">
                                         <connections>
                                             <action selector="stopButtonTapped:" destination="BYZ-38-t0r" id="mV2-ja-Bjm"/>
                                         </connections>
@@ -68,6 +82,9 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5C-U1-V9W">
                                 <rect key="frame" x="16" y="84" width="343" height="539"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rwR-Tr-YMZ"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,6 +102,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="a04-Mz-6Eb" id="HrQ-Gj-JAN"/>
                         <outlet property="backButton" destination="gcv-Bl-1Rx" id="1k1-WX-Cmd"/>
                         <outlet property="reloadButton" destination="8fa-wo-Ccf" id="UuY-UB-Tb5"/>
                         <outlet property="searchBar" destination="Bfe-B4-lec" id="mHg-GX-fcC"/>
